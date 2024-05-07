@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>cn.bugstack.mybatis</groupId>
-    <artifactId>mybatis-step-16</artifactId>
+    <artifactId>mybatis-step-17</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <dependencies>
