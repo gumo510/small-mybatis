@@ -46,6 +46,7 @@ public class PooledConnection implements InvocationHandler {
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         String methodName = method.getName();
         // 如果是调用 CLOSE 关闭链接方法，则将链接加入连接池中，并返回null
+        // methodName.hashCode 可以删除；https://github.com/mybatis/mybatis-3/issues/1691
         if (CLOSE.hashCode() == methodName.hashCode() && CLOSE.equals(methodName)) {
             dataSource.pushConnection(this);
             return null;
